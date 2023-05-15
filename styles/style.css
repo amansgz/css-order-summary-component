@@ -42,7 +42,7 @@ main {
 .card-body {
   text-align: center;
 }
-.card-body h2 {
+.card-body h1 {
   padding: 1.8rem 0;
   font-weight: 900;
   color: var(--dark-blue);
