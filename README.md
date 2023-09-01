@@ -1,11 +1,4 @@
-# 👩‍💻 Frontend Mentor - Order summary card
-
-[Frontend Mentor challenges](https://www.frontendmentor.io/) help you improve your coding skills by building realistic projects.
-
-This is a solution for [Order Summary Card challenge](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj) 
-
-![Design preview for the Order summary card coding challenge](./styles/images/preview.png)
-
+# 👩‍💻 Order summary card
 
 ## The challenge
 
@@ -24,10 +17,19 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-## Live site solution
 
-[Live site](https://amansgz.github.io/css-order-summary-component/) deployed with GitHub Pages.
+<div>
+  <h3>
+    <a href= "https://amansgz.github.io/css-order-summary-component/">
+      Live site
+    </a>
+    <span> | </span>
+    <a href= "https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-## Author
+![Design preview for the Order summary card coding challenge](./styles/images/preview.png)
 
-- Frontend Mentor - [@amansgz](https://www.frontendmentor.io/profile/amansgz)
+This application/site was created as a submission to <a href= "https://www.frontendmentor.io/">Frontend Mentor Challenges</a> 
