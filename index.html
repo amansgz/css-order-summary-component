@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
-
   <!-- STYLES -->
   <link rel="stylesheet" href="./styles/style.css">
   <title>Frontend Mentor | CSS Order Summary Component</title>
@@ -17,49 +16,58 @@
 <body>
   <main>
     <article class= "card">
-      <img 
-        src= "./styles/images/illustration-hero.svg" 
-        alt="Smiling person listening music">
-      <div class="card-body">
-        <h1>
+      <div class= "card__image">
+        <img 
+          src= "./styles/images/illustration-hero.svg" 
+          alt="Smiling person listening music">
+      </div>    
+      <div class="card__body">
+        <h1 class= "card__title">
           Order Summary
         </h1>
-        <p>        
-          You can now listen to millions of songs, audiobooks, and podcasts on any 
-          device anywhere you like!
+        <p class= "card__text">
+          You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
         </p>
-        <div class= "plan">
+        <div class= "card__details">
           <img 
             src= "./styles/images/icon-music.svg"
             alt= "icon music">
-            <div class= "plan-details">
-              <span class= "annual-plan">
-                Annual Plan
-              </span>
-              <span class= "price-plan">
-                $59.99/year
-              </span>  
-            </div>
-          <a href= "#" class= "change-plan">
+          <div class= "details">
+            <span class= "details__time">
+              Annual Plan
+            </span>
+            <span class= "details__price">
+              $59.99/year
+            </span>  
+          </div>
+          <a href= "#" class= "btn__change__plan">
             Change
           </a>
         </div>
       </div>  
-      <footer class= "card-footer">
-        <a href= "#">
+      <div class= "card__footer">
+        <a href= "#" class= "btn__pay">
           Proceed to Payment
         </a>
-        <button>
+        <button class= "btn__cancel__order">
           Cancel Order
         </button>
-      </footer>
+      </div>
     </article>
   </main>
 
-  <footer class="attribution">
-    <small>
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> 
-      | Coded by <a href="https://github.com/amansgz">@amansgz</a>
+  <footer class= "footer">
+    <small class= "footer__attribution">
+      Challenge by 
+      <a href= "https://www.frontendmentor.io?ref=challenge" 
+        target= "_blank">
+        Frontend Mentor
+      </a><br>
+      Coded by 
+      <a href= "https://github.com/amansgz"
+        target= "_blank">
+        @amansgz
+      </a>
     </small>
   </footer>
 

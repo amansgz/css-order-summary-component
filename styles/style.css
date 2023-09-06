@@ -1,96 +1,108 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 :root {
   --pale-blue: hsl(225, 100%, 94%);
   --bright-blue: hsl(245, 75%, 52%);
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
 }
 body {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-image: url('./images/pattern-background-mobile.svg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
   background-color: var(--pale-blue);
   font-family: 'Red Hat Display', sans-serif;
+  font-size: 14px;
 }
 main {
   display: grid;
-  place-items: center;
+  place-content: center;
+  height: 100vh;
 }
+/****************************
+  CARD
+/****************************/
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: min(85%, 400px);
-  overflow: hidden;
+  width: 330px;
+  background-color: var(--white);
   border-radius: 24px;
-  background-color: white;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
-.card img {
+.card__image img {
   display: block;
   max-width: 100%;
 }
-.card-body {
+.card__body {
   text-align: center;
 }
-.card-body h1 {
-  padding: 1.8rem 0;
+.card__title {
+  margin: 2rem 0 1rem;
   font-weight: 900;
   color: var(--dark-blue);
 }
-.card-body p {
-  width: clamp(265px, 70vw, 300px);
-  font-size: 16px;
+.card__text {
+  width: 30ch;
   color: var(--desaturated-blue);
   line-height: 1.5;
 }
-.plan {
+.card__details {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-  width: clamp(270px, 70vw, 300px);
-  padding: 1rem;
-  margin: 1.8rem 0;
-  font-size: 14px;
+  padding: 1em;
+  margin: 1rem 0 1.5rem;
   background-color: var(--very-pale-blue);
   border-radius: 12px;
 }
-.plan-details {
-  text-align: left;
-}
-.plan img {
+.card__details img {
   display: block;
   width: 40px;
 }
-.annual-plan {
+.details {
+  text-align: left;
+}
+.details__time {
   display: block;
   margin-bottom: .3rem;
+  font-size: 12px;
   font-weight: 700;
   color: var(--dark-blue);
 } 
-.price-plan { 
+.details__price { 
   color: var(--desaturated-blue);
 }
-.change-plan {
+.btn__change__plan {
+  color: var(--bright-blue);
+  transition: .1s ease;
+}
+.btn__change__plan:hover,
+.btn__change__plan:focus-visible {
+  text-decoration: none;
   color: var(--bright-blue);
 }
-.card-footer {
+.card__footer {
   text-align: center;
 }
-.card-footer a {
+.btn__pay {
   display: block;
-  width: clamp(270px, 70vw, 300px);
+  width: 300px;
   padding:  .8rem 1rem;
-  font-size: 14px;
   font-weight: 700;
   color: var(--very-pale-blue);
   text-decoration: none;
@@ -99,41 +111,54 @@ main {
   border: 1px solid var(--dark-blue);
   background-color: var(--bright-blue);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: opacity .1s ease;
 }
-.card-footer button {
+.btn__pay:hover,
+.btn__pay:focus-visible {
+  opacity: 0.6;
+}
+.btn__cancel__order {
   margin: 1rem 0 2rem;
   font-weight: 900;
   color: var(--desaturated-blue);
   background-color: transparent; 
   border: none; 
+  transition: .1s ease;
 }
-.attribution {
+.btn__cancel__order:hover,
+.btn__cancel__order:focus-visible {
   color: var(--dark-blue);
+  cursor: pointer;
+}
+/****************************
+  FOOTER
+/****************************/
+.footer {
+  margin-top: auto;
+  padding: 2em;
   text-align: center;
+  color: var(--dark-blue);
 }
-.attribution a {
-  color: var(--desaturated-blue);
+.footer__attribution a {
+  text-decoration: none;
+  color: var(--dark-blue);
+  transition: color .1s ease;
 }
+.footer__attribution a:hover,
+.footer__attribution a:focus-visible {
+  color: var(--bright-blue);
+}
+/****************************
+  MEDIA QUERIES - 768px
+/****************************/
 @media screen and (min-width: 768px) {
   body {
     background-image: url('./images/pattern-background-desktop.svg');
   }
-  .plan a:hover {
-    text-decoration:none;
-    color:  hsl(245, 75%, 35%);
-    transition: color 0.1s ease;
+  .card {
+    width: 370px;
   }
-  .card-footer a:hover {
-    background-color: hsl(245, 75%, 68%);
-    transition: background-color 0.2s ease;
-  }
-  .card-footer button:hover {
-    color: var(--dark-blue);
-    transition: color 0.2s ease;
-    cursor: pointer;
-  }
-  .attribution a:hover {
-    color: var(--bright-blue);
-    transition: color 0.2s ease;
+  .card__text {
+    width: 34ch;
   }
 }
